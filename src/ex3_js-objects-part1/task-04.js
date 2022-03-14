@@ -1,7 +1,7 @@
 function propertyUpdate(prop, object) {
-  if (!object.hasOwnProperty(`${prop}`)) {
-    const newObject = {};
-    newObject[`${prop}`] = 'new';
+  if (!object.hasOwnProperty(prop)) {
+    const newObject = { ...object };
+    newObject[prop] = 'new';
     return newObject;
   }
 
