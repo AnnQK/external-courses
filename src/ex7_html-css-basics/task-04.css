@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+body {
+    margin: 0 auto;
+    width: 90%;
+    height: 100vh;
+    background-color: #add826;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+table {
+    padding: 1rem;
+    border: 2px #000 dotted;
+    background-color: rgba(224, 207, 76, 0.8);
+}

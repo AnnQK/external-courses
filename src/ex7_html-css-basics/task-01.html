@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <hr />
+    <h2>Heading 2</h2>
+    <hr />
+    <h3>Heading 3</h3>
+    <hr />
+    <h4>Heading 4</h4>
+    <hr />
+    <h5>Heading 5</h5>
+    <hr />
+    <h6>Heading 6</h6>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <div style="background-color: #6262; height: 50px; width: 50px"></div>
+
+    <table border="1">
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+      <tr>
+        <td>Info 1</td>
+        <td>Info 2</td>
+        <td>Info 3</td>
+      </tr>
+    </table>
+
+    <img src="//unsplash.it/100" alt="random image" />
+
+    <a
+      href="https://www.youtube.com/watch?v=nRe3xFeyhVY&list=PLdSUTU0oamrwC0PY7uUc0EJMKlWCiku43&index=1&t=1s&ab_channel=Everness"
+      >Link</a
+    >
+
+    <pre>
+        function createUserName(accs) {
+            accs.forEach(function (acc) {
+              acc.username = acc.owner
+                .toLowerCase()
+                .split(' ')
+                .map(name => name[0])
+                .join('');
+            });
+          }
+    </pre>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.<br />
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat.<br />
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur.<br />
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+      deserunt mollit anim id est laborum.
+    </p>
+  </body>
+</html>
