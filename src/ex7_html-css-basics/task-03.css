@@ -1,0 +1,18 @@
+div {
+    height: 100px;
+    width: 100px;
+    background: #626262;
+}
+
+.green {
+    border: solid #008000 5px
+}
+
+.blue {
+    box-shadow: 0 0 0 5px #0000ff;
+}
+
+.black {
+    padding: 5px;
+    background-color: #000;
+}
