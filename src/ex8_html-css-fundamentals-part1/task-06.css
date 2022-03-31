@@ -1,0 +1,29 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 12px;
+    margin: 50% auto;
+    border-radius: 8px;
+    box-shadow:
+        0 0 0 1px hsl(0, 1%, 40%),
+        0 0 0 7px hsl(0, 3%, 71%),
+        0 0 0 9px hsl(0, 7%, 91%),
+        0 0 0 11px hsl(0, 2%, 36%);
+
+    background: linear-gradient(hsl(0, 7%, 91%), hsl(0, 2%, 36%));
+    color: hsl(0, 2%, 34%);
+    font-weight: 700;
+
+}
+
+.btn-text {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.btn-image {
+    width: 25px;
+    height: 25px;
+}
