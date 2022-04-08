@@ -1,0 +1,26 @@
+#main-table {
+    color: #1864ab;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    background-color: #e7f5ff;
+}
+
+th,
+td {
+    padding: 10px;
+    border: #fff 2px solid;
+}
+
+th {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.name-row {
+    text-transform: capitalize;
+}
+
+td {
+    text-align: left;
+    padding: 25px;
+}
