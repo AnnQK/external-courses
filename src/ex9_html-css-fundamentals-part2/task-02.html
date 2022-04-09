@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form task</title>
+  </head>
+  <body>
+    <form action="http://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Personal data</legend>
+
+        <label for="surname"
+          >Surname
+          <input type="text" name="surname" id="surname" required /> </label
+        ><br />
+
+        <label for="first-name"
+          >First Name
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            required
+          /> </label
+        ><br />
+
+        <label for="middle-name"
+          >Middle Name
+          <input type="text" name="middle-name" id="middle-name" /> </label
+        ><br />
+
+        Are you
+        <label for="male">
+          <input
+            type="radio"
+            name="gender"
+            id="male"
+            value="male"
+            checked
+          />male
+        </label>
+        <label for="female">
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            id="female"
+          />female</label
+        >
+        <br />
+
+        <label for="age"
+          >Age
+          <input type="number" name="age" id="age" max="101" min="18" />
+        </label>
+        <br />
+
+        <label for="country"
+          >Country of Residence
+          <select name="country" id="country">
+            <option value="ru">Russia</option>
+            <option value="uk">United Kingdom</option>
+            <option value="us">USA</option>
+          </select>
+        </label>
+        <br />
+
+        City
+        <label for="ryazan">
+          <input
+            type="checkbox"
+            name="city"
+            id="ryazan"
+            value="Ryazan"
+          />Ryazan</label
+        >
+        <label for="moscow">
+          <input type="checkbox" name="city" value="Moscow" id="moscow" />Moscow
+        </label>
+        <br />
+
+        <label for="upload"
+          >Photography
+          <input type="file" name="upload" id="upload" />
+        </label>
+        <hr />
+
+        <label for="field"
+          >Title
+          <select name="field" id="field" multiple>
+            <optgroup label="Technologies">
+              <option value="web-master">Web Master</option>
+              <option value="database-admin">Database Admin</option>
+              <option value="cd">Computer-aided design</option>
+            </optgroup>
+            <optgroup label="Finance">
+              <option value="ecom-planning">Economic Planning</option>
+              <option value="management">Management accounting</option>
+              <option value="budget">Budget and planning</option>
+            </optgroup>
+          </select>
+        </label>
+        <br />
+
+        <label for="salary"
+          >Salary
+          <input type="range" name="salary" id="salary" />
+        </label>
+        <br />
+        <textarea
+          name="about"
+          id="about"
+          cols="40"
+          rows="10"
+          placeholder="Tell us about yourself..."
+        ></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="site"
+          >Site <input type="text" name="site" id="site" /> </label
+        ><br />
+
+        <label for="email"
+          >Email <input type="text" name="email" id="email" required /> </label
+        ><br />
+
+        <label for="phone"
+          >Pnone <input type="text" name="phone" id="phone" /> </label
+        ><br />
+      </fieldset>
+
+      <label for="password"
+        >Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          minlength="8"
+          maxlength="25"
+          required
+      /></label>
+      <br />
+
+      <button type="submit">Отправить</button>
+
+      <button type="reset">Сбросить</button>
+    </form>
+  </body>
+</html>

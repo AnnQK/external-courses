@@ -1,0 +1,28 @@
+div {
+    margin: 50px auto;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.cat-box {
+    border-radius: 50%;
+
+}
+
+.cat-image {
+    width: 300px;
+}
+
+.shape {
+    transform-origin: center;
+    transform: rotate(-150deg);
+
+}
+
+.shape-image {
+    height: 200px;
+    width: auto;
+    transform-origin: center;
+    transform: rotate(50deg);
+}

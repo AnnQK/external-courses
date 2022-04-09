@@ -1,0 +1,7 @@
+.table-row:nth-child(even) {
+    background-color: #d0ebff;
+}
+
+.table-row:hover {
+    background-color: #a5d8ff;
+}
