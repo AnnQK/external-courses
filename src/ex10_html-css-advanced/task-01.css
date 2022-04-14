@@ -1,0 +1,116 @@
+/* loader animation */
+.loader {
+    margin: 100px auto;
+    height: 100px;
+    width: 50px;
+    animation: rotating 3s linear infinite;
+}
+
+.circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: sizing 2s ease-in-out infinite;
+}
+
+.blue {
+    background-color: #a5d8ff;
+    animation-delay: 1s;
+}
+
+.green {
+    background-color: #63e6be;
+
+}
+
+@keyframes rotating {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sizing {
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* ball animation */
+
+.ball-animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+}
+
+.block {
+    height: 15px;
+    width: 100%;
+    background-color: #d9480f;
+}
+
+.ball {
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #dee2e6;
+    animation: bounce 5s infinite ease-in-out
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-210px);
+    }
+
+    50% {
+        transform: translateY(210px);
+    }
+
+    100% {
+        transform: translateY(-210px);
+    }
+}
+
+/* infinite animation */
+
+.item {
+    margin: 100px auto;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(#ffdeeb, #d6336c);
+    animation: metamorph 5s infinite linear;
+}
+
+@keyframes metamorph {
+    0% {
+        border-radius: 50%;
+
+    }
+
+    20% {
+        border-radius: 0;
+    }
+
+    40% {
+        background: linear-gradient(#d0bfff, #6741d9);
+
+    }
+
+    60% {
+        transform: matrix(1, 2, -1, 1, 80, 80) scale(1.5);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        border-radius: 50%;
+    }
+}
