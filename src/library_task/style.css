@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Font awesome';
+    src: url("./assets/fonts/FontAwesome.otf");
+}
+
+@font-face {
+    font-family: 'Proxima Nove Regular';
+    src: url("./assets/fonts/ProximaNovaRegular.otf")
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 1320px;
+    font-size: 13px;
+    font-family: "Proxima Nove Regular";
+
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    height: 45px;
+    width: 100%;
+    background-color: #2f3649;
+    color: #fff;
+
+}
+
+
+#acc-svg,
+#footer-settings {
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+    transition: 400ms;
+
+}
+
+#footer-help {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: 400ms;
+}
+
+.header__links {
+    width: 200px;
+    margin: 0;
+
+}
+
+.header__links__list {
+    padding-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.header-link {
+    color: #60667e;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.header-link:visited {
+    color: #60667e;
+    text-decoration: none;
+}
+
+.header-link:hover {
+    color: #fff;
+}
+
+.header__acc {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 160px;
+    background-color: #16a4fa;
+}
+
+.header__acc-image {
+    margin: 0 0 0 10px;
+    width: 33px;
+    height: 33px;
+    border: solid #fff 2px;
+    border-radius: 50%;
+}
+
+.header__acc-name {
+    margin: 0;
+    padding: 0 0 0 10px;
+    text-align: center;
+}
+
+.header__acc-btn {
+    width: 40px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header__acc-btn:hover #acc-svg {
+    fill: #2f3649;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    height: 45px;
+    background-color: #2f3649;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.btn-help,
+.btn-settings {
+    margin: 0;
+    height: 45px;
+    width: 55px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.btn-help {
+    background-color: #60667e;
+}
+
+.btn-settings {
+    background-color: #16a4fa;
+}
+
+.btn-settings:hover #footer-settings,
+.btn-help:hover #footer-help {
+    fill: #2f3649;
+}
