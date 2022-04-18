@@ -124,10 +124,15 @@ body {
     fill: #2f3649;
 }
 
+/* MAIN */
+
+main {
+    flex-grow: 1;
+}
+
 /* FOOTER */
 
 .footer {
-    margin-top: auto;
     width: 100%;
     height: 45px;
     background-color: #2f3649;
