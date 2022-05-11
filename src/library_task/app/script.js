@@ -19,46 +19,42 @@ const submitBookBtn = document.querySelector('.modal__btn-submit');
 const filterBtnContainer = document.querySelector('.filter-btns');
 
 // books on display
-const displayBooks = [];
+let displayBooks = [];
 
 // WORK WITH API
+
+function prepareBooks(booksArr) {
+  const bookList = [];
+  booksArr.forEach((book) => bookList.push({
+    title: book.title,
+    author: book.author,
+    image: book.imgUrl,
+    raiting: book.review.split(' ').join('')[0],
+  }));
+  return bookList;
+}
 // getting books from api
 async function getBooks() {
   try {
     const response = await fetch(BOOK_URL, options);
     const data = await response.json();
     const books = data.Books;
-    await Promise.all(
-      books.map(async (book) => {
-        displayBooks.push({
-          title: book.title,
-          author: book.author,
-          image: book.imgUrl,
-          raiting: book.review.split(' ').join('')[0],
-        });
-      }),
-    );
+    await Promise.all((displayBooks = prepareBooks(books)));
   } catch {
-    const books = localBooks;
-    books.map((book) => displayBooks.push({
-      title: book.title,
-      author: book.author,
-      image: book.imgUrl,
-      raiting: book.review.split(' ').join('')[0],
-    }));
+    displayBooks = prepareBooks(localBooks);
   }
   return displayBooks;
 }
 
 // RATING STARS
-/* eslint-disable */
+
 function raiting(e) {
   if (e.target.classList.contains('raiting-btn')) {
     // find stars in clicked books container
     const stars = Array.from(
       e.target
         .closest('.book-container__stats')
-        .querySelectorAll('.raiting-btn')
+        .querySelectorAll('.raiting-btn'),
     );
 
     // stars container
@@ -67,15 +63,20 @@ function raiting(e) {
     starsContainer.dataset.raiting = clickedStarIdx + 1;
     // find book in array
     const containerTitle = Array.from(
-      starsContainer.parentElement.childNodes
+      starsContainer.parentElement.childNodes,
     )[3].textContent;
+
     // update display books array
     displayBooks.map((book) => {
       if (book.title === containerTitle) {
-        return (book.raiting = starsContainer.dataset.raiting);
+        // eslint-disable-next-line no-param-reassign
+        book.raiting = starsContainer.dataset.raiting;
+        return book;
       }
+      return book;
     });
   }
+  // eslint-disable-next-line no-use-before-define
   renderBooks(displayBooks);
 }
 
@@ -99,7 +100,7 @@ function renderRaiting() {
     item.addEventListener('click', raiting);
   });
 }
-/* eslint-enable */
+
 // creating a container for every book
 
 function renderBooks(booksArr) {
