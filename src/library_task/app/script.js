@@ -24,14 +24,12 @@ let displayBooks = [];
 // WORK WITH API
 
 function prepareBooks(booksArr) {
-  const bookList = [];
-  booksArr.forEach((book) => bookList.push({
+  return booksArr.map((book) => ({
     title: book.title,
     author: book.author,
     image: book.imgUrl,
     raiting: book.review.split(' ').join('')[0],
   }));
-  return bookList;
 }
 // getting books from api
 async function getBooks() {
