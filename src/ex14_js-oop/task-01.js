@@ -2,14 +2,14 @@
 function ElectricDevice(power = 0, isTurnOn = false) {
   this.power = power;
   this.isTurnOn = isTurnOn;
-  this.turnOnOff = function () {
-    this.isTurnOn = !this.isTurnOn;
-    return console.log('Changed turn');
-  };
-  this.getInfo = function () {
-    return console.log(Object.entries(this));
-  };
 }
+
+ElectricDevice.prototype.turnOnOff = () => {
+  this.isTurnOn = !this.isTurnOn;
+  return console.log('Changed turn');
+};
+
+ElectricDevice.prototype.getInfo = () => console.log(Object.entries(this));
 
 // all cleaners
 function VacuumCleaner(power = 0, isTurnOn = false, cleaningMode = 'dry') {
@@ -18,7 +18,7 @@ function VacuumCleaner(power = 0, isTurnOn = false, cleaningMode = 'dry') {
 }
 
 VacuumCleaner.prototype = Object.create(ElectricDevice.prototype);
-VacuumCleaner.prototype.changeMode = function (mode) {
+VacuumCleaner.prototype.changeMode = (mode) => {
   if (this.isTurnOn) {
     this.cleaningMode = mode;
 
@@ -33,7 +33,7 @@ function RobotDevice(power = 0, isTurnOn = false, hasMap = false) {
 }
 
 RobotDevice.prototype = Object.create(ElectricDevice.prototype);
-RobotDevice.prototype.addMap = function () {
+RobotDevice.prototype.addMap = () => {
   if (this.isTurnOn) {
     this.hasMap = true;
 
@@ -53,7 +53,7 @@ function RobotCleaner(
 }
 
 RobotCleaner.prototype = Object.create(VacuumCleaner.prototype);
-RobotCleaner.prototype.addMap = function () {
+RobotCleaner.prototype.addMap = () => {
   RobotDevice.prototype.addMap.call(this);
 };
 
@@ -67,7 +67,7 @@ function RobotSoldier(
   this.isShooting = isShooting;
 }
 RobotSoldier.prototype = Object.create(RobotDevice.prototype);
-RobotSoldier.prototype.startShooting = function () {
+RobotSoldier.prototype.startShooting = () => {
   if (this.isTurnOn) {
     this.isShooting = true;
 
@@ -76,7 +76,7 @@ RobotSoldier.prototype.startShooting = function () {
   return console.log('Turn it on');
 };
 
-RobotSoldier.prototype.stopShooting = function () {
+RobotSoldier.prototype.stopShooting = () => {
   if (this.isTurnOn) {
     this.isShooting = false;
 
@@ -85,7 +85,7 @@ RobotSoldier.prototype.stopShooting = function () {
   return console.log('Turn it on');
 };
 
-RobotSoldier.prototype.shootingStatus = function () {
+RobotSoldier.prototype.shootingStatus = () => {
   if (this.isTurnOn) {
     return console.log(`Shooting status is ${this.isShooting}`);
   }
